@@ -1,10 +1,21 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 # VAEAN
 simple practice of fine-tuning in few-shot image classification task 
 
 
 
 ## Notion
-The auxiliary set https://latex.codecogs.com/gif.latex?\\$\mathcal{A}$ is denoted as $\{X_i^{(\mathcal{A})},y_{i}^{(\mathcal{A})}\}_{i=1}^{n_\mathcal{A}}$, where $n_\mathcal{A}$ is the size of auxiliary set, and $X_i^{(\mathcal{A})}$,$y_{i}^{(\mathcal{A})}$ is the $i^{\textrm{th}}$ image and label from the $i^{\textrm{th}}$ sample, with $X_i^{(\mathcal{A})} \in \mathbb{R}^{H\times W\times 3}$ and the one-hot label $y_{i}^{(\mathcal{A})} \in \{0,1\}^{N_{\mathcal{A}}}$, where $N_{\mathcal{A}}$ is the number of categories of image in auxiliary set. And the support set can be denoted similarly as $S=\{X_i^{(\mathcal{S})},y_{i}^{(\mathcal{S})}\}_{i=1}^{n_\mathcal{S}}$. Let $f_\theta$ denote the embedding model with parameter $\theta$ and $C_\omega$ denote the classification model with parameter $\omega$, and $L$ is the loss function.
+The auxiliary set $\mathcal{A}$ is denoted as $\{X_i^{(\mathcal{A})},y_{i}^{(\mathcal{A})}\}_{i=1}^{n_\mathcal{A}}$, where $n_\mathcal{A}$ is the size of auxiliary set, and $X_i^{(\mathcal{A})}$,$y_{i}^{(\mathcal{A})}$ is the $i^{\textrm{th}}$ image and label from the $i^{\textrm{th}}$ sample, with $X_i^{(\mathcal{A})} \in \mathbb{R}^{H\times W\times 3}$ and the one-hot label $y_{i}^{(\mathcal{A})} \in \{0,1\}^{N_{\mathcal{A}}}$, where $N_{\mathcal{A}}$ is the number of categories of image in auxiliary set. And the support set can be denoted similarly as $S=\{X_i^{(\mathcal{S})},y_{i}^{(\mathcal{S})}\}_{i=1}^{n_\mathcal{S}}$. Let $f_\theta$ denote the embedding model with parameter $\theta$ and $C_\omega$ denote the classification model with parameter $\omega$, and $L$ is the loss function.
 
 ### **Baseline method of fine-tuning:**
 
