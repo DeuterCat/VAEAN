@@ -55,5 +55,5 @@ $$
 
 In VAEAN, We set up a Reparadecoder (a decoder with reparameterization trick, the mean and variation of the hidden variable is calculated and used to form the hidden variable with noise) denoted as $g_\varphi$ with parameter $\varphi$ . $L_i$ stands for the $i^{\textrm{th}}$ total loss of VAEAN, $L_1$ is the loss of classification, and $L_2$ is the adapted loss of Variational AutoEncoder. ${\mathcal{S}}^\prime$ is the augmented support set containing images produced by decoder, and $n_{\mathcal{S}^{\prime}}$ is the size of $\mathcal{S}^{\prime}$. In VAEAN, the embedding model also plays the role as the encoder, the output of the embedding model is passed to both the Reparadecoder and the classifier. The decoder is trained in pre-training stage, and used to create augmented images in fine-tuning stage.
 
-**License**
+## License
 本项目基于 GLWTPL (Good Luck With That Public License) 许可证开源。
